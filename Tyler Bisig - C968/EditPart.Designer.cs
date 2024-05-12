@@ -38,12 +38,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_partMin = new System.Windows.Forms.TextBox();
+            this.tb_partMax = new System.Windows.Forms.TextBox();
+            this.tb_partValue = new System.Windows.Forms.TextBox();
+            this.tb_partInventory = new System.Windows.Forms.TextBox();
+            this.tb_partName = new System.Windows.Forms.TextBox();
+            this.tb_partID = new System.Windows.Forms.TextBox();
             this.rb_outsourced = new System.Windows.Forms.RadioButton();
             this.rb_inHouse = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -137,47 +137,47 @@
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 28;
             // 
-            // textBox5
+            // tb_partMin
             // 
-            this.textBox5.Location = new System.Drawing.Point(219, 177);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(53, 20);
-            this.textBox5.TabIndex = 27;
+            this.tb_partMin.Location = new System.Drawing.Point(219, 177);
+            this.tb_partMin.Name = "tb_partMin";
+            this.tb_partMin.Size = new System.Drawing.Size(53, 20);
+            this.tb_partMin.TabIndex = 27;
             // 
-            // textBox6
+            // tb_partMax
             // 
-            this.textBox6.Location = new System.Drawing.Point(117, 177);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(53, 20);
-            this.textBox6.TabIndex = 26;
+            this.tb_partMax.Location = new System.Drawing.Point(117, 177);
+            this.tb_partMax.Name = "tb_partMax";
+            this.tb_partMax.Size = new System.Drawing.Size(53, 20);
+            this.tb_partMax.TabIndex = 26;
             // 
-            // textBox3
+            // tb_partValue
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 25;
+            this.tb_partValue.Location = new System.Drawing.Point(117, 151);
+            this.tb_partValue.Name = "tb_partValue";
+            this.tb_partValue.Size = new System.Drawing.Size(100, 20);
+            this.tb_partValue.TabIndex = 25;
             // 
-            // textBox4
+            // tb_partInventory
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 24;
+            this.tb_partInventory.Location = new System.Drawing.Point(117, 125);
+            this.tb_partInventory.Name = "tb_partInventory";
+            this.tb_partInventory.Size = new System.Drawing.Size(100, 20);
+            this.tb_partInventory.TabIndex = 24;
             // 
-            // textBox2
+            // tb_partName
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 23;
+            this.tb_partName.Location = new System.Drawing.Point(117, 99);
+            this.tb_partName.Name = "tb_partName";
+            this.tb_partName.Size = new System.Drawing.Size(100, 20);
+            this.tb_partName.TabIndex = 23;
             // 
-            // textBox1
+            // tb_partID
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 22;
+            this.tb_partID.Location = new System.Drawing.Point(117, 73);
+            this.tb_partID.Name = "tb_partID";
+            this.tb_partID.Size = new System.Drawing.Size(100, 20);
+            this.tb_partID.TabIndex = 22;
             // 
             // rb_outsourced
             // 
@@ -226,12 +226,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_partMin);
+            this.Controls.Add(this.tb_partMax);
+            this.Controls.Add(this.tb_partValue);
+            this.Controls.Add(this.tb_partInventory);
+            this.Controls.Add(this.tb_partName);
+            this.Controls.Add(this.tb_partID);
             this.Controls.Add(this.rb_outsourced);
             this.Controls.Add(this.rb_inHouse);
             this.Controls.Add(this.label1);
@@ -255,12 +255,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_partMin;
+        private System.Windows.Forms.TextBox tb_partMax;
+        private System.Windows.Forms.TextBox tb_partValue;
+        private System.Windows.Forms.TextBox tb_partInventory;
+        private System.Windows.Forms.TextBox tb_partName;
+        private System.Windows.Forms.TextBox tb_partID;
         private System.Windows.Forms.RadioButton rb_outsourced;
         private System.Windows.Forms.RadioButton rb_inHouse;
         private System.Windows.Forms.Label label1;
