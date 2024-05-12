@@ -16,5 +16,10 @@ namespace Tyler_Bisig___C968
         {
             InitializeComponent();
         }
+
+        private void EditPart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
