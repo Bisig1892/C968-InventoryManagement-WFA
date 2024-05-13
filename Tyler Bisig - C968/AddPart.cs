@@ -16,5 +16,15 @@ namespace Tyler_Bisig___C968
         {
             InitializeComponent();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddPart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
