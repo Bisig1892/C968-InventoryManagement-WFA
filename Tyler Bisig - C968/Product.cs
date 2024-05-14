@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Tyler_Bisig___C968
 {
-    public abstract class Part
+    public class Product
     {
-        private int PartId;
+        private int ProductId;
         private string Name;
         private decimal Price;
         private int InStock;
