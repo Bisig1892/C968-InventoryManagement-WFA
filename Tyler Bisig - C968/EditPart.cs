@@ -21,5 +21,10 @@ namespace Tyler_Bisig___C968
         {
 
         }
+        // Closes Edit Part window
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

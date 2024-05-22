@@ -16,5 +16,10 @@ namespace Tyler_Bisig___C968
         {
             InitializeComponent();
         }
+        // Closes Modify Product Window
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
