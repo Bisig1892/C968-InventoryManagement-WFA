@@ -192,7 +192,6 @@
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "label8";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btn_save
             // 
@@ -211,6 +210,7 @@
             this.btn_cancel.TabIndex = 18;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // AddPart
             // 

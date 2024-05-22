@@ -58,7 +58,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 16);
+            this.label1.Size = new System.Drawing.Size(218, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory Management System";
             // 
@@ -174,6 +174,7 @@
             this.btn_addPart.TabIndex = 11;
             this.btn_addPart.Text = "Add";
             this.btn_addPart.UseVisualStyleBackColor = true;
+            this.btn_addPart.Click += new System.EventHandler(this.btn_addPart_Click);
             // 
             // btn_editPart
             // 
@@ -183,6 +184,7 @@
             this.btn_editPart.TabIndex = 12;
             this.btn_editPart.Text = "Modify";
             this.btn_editPart.UseVisualStyleBackColor = true;
+            this.btn_editPart.Click += new System.EventHandler(this.btn_editPart_Click);
             // 
             // btn_deletePart
             // 
@@ -210,6 +212,7 @@
             this.btn_editProduct.TabIndex = 15;
             this.btn_editProduct.Text = "Modify";
             this.btn_editProduct.UseVisualStyleBackColor = true;
+            this.btn_editProduct.Click += new System.EventHandler(this.btn_editProduct_Click);
             // 
             // btn_addProduct
             // 
@@ -219,6 +222,7 @@
             this.btn_addProduct.TabIndex = 14;
             this.btn_addProduct.Text = "Add";
             this.btn_addProduct.UseVisualStyleBackColor = true;
+            this.btn_addProduct.Click += new System.EventHandler(this.btn_addProduct_Click);
             // 
             // btn_exit
             // 
@@ -228,8 +232,9 @@
             this.btn_exit.TabIndex = 17;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // Form1
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +259,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "MainScreen";
             this.Text = "Main Screen";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
