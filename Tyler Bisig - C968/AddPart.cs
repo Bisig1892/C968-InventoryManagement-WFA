@@ -16,15 +16,26 @@ namespace Tyler_Bisig___C968
         {
             InitializeComponent();
         }
-
-        private void AddPart_Load(object sender, EventArgs e)
+        private void rb_inHouse_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rb_inHouse.Checked)
+            {
+                label8.Text = "Machine ID";
+            }
         }
+        private void rb_outsourced_CheckedChanged(object sender, EventArgs e)
+        {
+            if ( rb_outsourced.Checked)
+            {
+                label8.Text = "Company Name";
+            }
+        }
+
         // Closes Add Part Window
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

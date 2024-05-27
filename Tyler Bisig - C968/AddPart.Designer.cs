@@ -38,12 +38,12 @@
             this.tb_partMin = new System.Windows.Forms.TextBox();
             this.tb_partMax = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Id = new System.Windows.Forms.Label();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_Inventory = new System.Windows.Forms.Label();
+            this.lbl_cost = new System.Windows.Forms.Label();
+            this.lbl_Max = new System.Windows.Forms.Label();
+            this.lbl_min = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.rb_inHouse.TabStop = true;
             this.rb_inHouse.Text = "In-House";
             this.rb_inHouse.UseVisualStyleBackColor = true;
+            this.rb_inHouse.CheckedChanged += new System.EventHandler(this.rb_inHouse_CheckedChanged);
             // 
             // rb_outsourced
             // 
@@ -80,6 +81,7 @@
             this.rb_outsourced.TabStop = true;
             this.rb_outsourced.Text = "Outsourced";
             this.rb_outsourced.UseVisualStyleBackColor = true;
+            this.rb_outsourced.CheckedChanged += new System.EventHandler(this.rb_outsourced_CheckedChanged);
             // 
             // tb_partID
             // 
@@ -130,64 +132,64 @@
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 9;
             // 
-            // label2
+            // lbl_Id
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "ID";
+            this.lbl_Id.AutoSize = true;
+            this.lbl_Id.Location = new System.Drawing.Point(89, 76);
+            this.lbl_Id.Name = "lbl_Id";
+            this.lbl_Id.Size = new System.Drawing.Size(18, 13);
+            this.lbl_Id.TabIndex = 10;
+            this.lbl_Id.Text = "ID";
             // 
-            // label3
+            // lbl_Name
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Name";
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Location = new System.Drawing.Point(72, 98);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Name.TabIndex = 11;
+            this.lbl_Name.Text = "Name";
             // 
-            // label4
+            // lbl_Inventory
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Inventory";
+            this.lbl_Inventory.AutoSize = true;
+            this.lbl_Inventory.Location = new System.Drawing.Point(56, 124);
+            this.lbl_Inventory.Name = "lbl_Inventory";
+            this.lbl_Inventory.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Inventory.TabIndex = 12;
+            this.lbl_Inventory.Text = "Inventory";
             // 
-            // label5
+            // lbl_cost
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 150);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Cost / Price";
+            this.lbl_cost.AutoSize = true;
+            this.lbl_cost.Location = new System.Drawing.Point(44, 150);
+            this.lbl_cost.Name = "lbl_cost";
+            this.lbl_cost.Size = new System.Drawing.Size(63, 13);
+            this.lbl_cost.TabIndex = 13;
+            this.lbl_cost.Text = "Cost / Price";
             // 
-            // label6
+            // lbl_Max
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Max";
+            this.lbl_Max.AutoSize = true;
+            this.lbl_Max.Location = new System.Drawing.Point(80, 180);
+            this.lbl_Max.Name = "lbl_Max";
+            this.lbl_Max.Size = new System.Drawing.Size(27, 13);
+            this.lbl_Max.TabIndex = 14;
+            this.lbl_Max.Text = "Max";
             // 
-            // label7
+            // lbl_min
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(187, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Min";
+            this.lbl_min.AutoSize = true;
+            this.lbl_min.Location = new System.Drawing.Point(187, 176);
+            this.lbl_min.Name = "lbl_min";
+            this.lbl_min.Size = new System.Drawing.Size(24, 13);
+            this.lbl_min.TabIndex = 15;
+            this.lbl_min.Text = "Min";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 202);
+            this.label8.Location = new System.Drawing.Point(39, 202);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 16;
@@ -220,12 +222,12 @@
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_min);
+            this.Controls.Add(this.lbl_Max);
+            this.Controls.Add(this.lbl_cost);
+            this.Controls.Add(this.lbl_Inventory);
+            this.Controls.Add(this.lbl_Name);
+            this.Controls.Add(this.lbl_Id);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.tb_partMin);
             this.Controls.Add(this.tb_partMax);
@@ -238,7 +240,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AddPart";
             this.Text = "Parts";
-            this.Load += new System.EventHandler(this.AddPart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,12 +257,12 @@
         private System.Windows.Forms.TextBox tb_partMin;
         private System.Windows.Forms.TextBox tb_partMax;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_Id;
+        private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Label lbl_Inventory;
+        private System.Windows.Forms.Label lbl_cost;
+        private System.Windows.Forms.Label lbl_Max;
+        private System.Windows.Forms.Label lbl_min;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_cancel;

@@ -71,7 +71,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(69, 206);
+            this.label8.Location = new System.Drawing.Point(37, 206);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 35;
@@ -190,6 +190,7 @@
             this.rb_outsourced.TabStop = true;
             this.rb_outsourced.Text = "Outsourced";
             this.rb_outsourced.UseVisualStyleBackColor = true;
+            this.rb_outsourced.CheckedChanged += new System.EventHandler(this.rb_outsourced_CheckedChanged);
             // 
             // rb_inHouse
             // 
@@ -201,6 +202,7 @@
             this.rb_inHouse.TabStop = true;
             this.rb_inHouse.Text = "In-House";
             this.rb_inHouse.UseVisualStyleBackColor = true;
+            this.rb_inHouse.CheckedChanged += new System.EventHandler(this.rb_inHouse_CheckedChanged);
             // 
             // label1
             // 
