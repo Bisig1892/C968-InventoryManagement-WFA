@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tb_partVariable = new System.Windows.Forms.TextBox();
             this.tb_partMin = new System.Windows.Forms.TextBox();
             this.tb_partMax = new System.Windows.Forms.TextBox();
             this.tb_partValue = new System.Windows.Forms.TextBox();
@@ -67,6 +67,7 @@
             this.btn_save.TabIndex = 36;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label8
             // 
@@ -131,12 +132,12 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "ID";
             // 
-            // textBox7
+            // tb_partVariable
             // 
-            this.textBox7.Location = new System.Drawing.Point(117, 203);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 28;
+            this.tb_partVariable.Location = new System.Drawing.Point(117, 203);
+            this.tb_partVariable.Name = "tb_partVariable";
+            this.tb_partVariable.Size = new System.Drawing.Size(100, 20);
+            this.tb_partVariable.TabIndex = 28;
             // 
             // tb_partMin
             // 
@@ -228,7 +229,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tb_partVariable);
             this.Controls.Add(this.tb_partMin);
             this.Controls.Add(this.tb_partMax);
             this.Controls.Add(this.tb_partValue);
@@ -257,7 +258,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tb_partVariable;
         private System.Windows.Forms.TextBox tb_partMin;
         private System.Windows.Forms.TextBox tb_partMax;
         private System.Windows.Forms.TextBox tb_partValue;

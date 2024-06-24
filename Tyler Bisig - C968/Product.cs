@@ -9,12 +9,12 @@ namespace Tyler_Bisig___C968
 {
     public class Product
     {
-        private int ProductId;
-        private string Name;
-        private decimal Price;
-        private int InStock;
-        private int Min;
-        private int Max;
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int InStock { get; set; }
+        public int Min {  get; set; }
+        public int Max { get; set; }
 
         public BindingList<Part> AssociatedParts = new BindingList<Part>();
 
