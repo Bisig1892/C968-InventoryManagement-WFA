@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rb_inHouse = new System.Windows.Forms.RadioButton();
             this.rb_outsourced = new System.Windows.Forms.RadioButton();
-            this.tb_partID = new System.Windows.Forms.TextBox();
+            this.tb_partId = new System.Windows.Forms.TextBox();
             this.tb_partName = new System.Windows.Forms.TextBox();
             this.tb_partValue = new System.Windows.Forms.TextBox();
             this.tb_partInventory = new System.Windows.Forms.TextBox();
             this.tb_partMin = new System.Windows.Forms.TextBox();
             this.tb_partMax = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tb_partVariable = new System.Windows.Forms.TextBox();
             this.lbl_Id = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Inventory = new System.Windows.Forms.Label();
@@ -83,12 +83,12 @@
             this.rb_outsourced.UseVisualStyleBackColor = true;
             this.rb_outsourced.CheckedChanged += new System.EventHandler(this.rb_outsourced_CheckedChanged);
             // 
-            // tb_partID
+            // tb_partId
             // 
-            this.tb_partID.Location = new System.Drawing.Point(120, 69);
-            this.tb_partID.Name = "tb_partID";
-            this.tb_partID.Size = new System.Drawing.Size(100, 20);
-            this.tb_partID.TabIndex = 3;
+            this.tb_partId.Location = new System.Drawing.Point(120, 69);
+            this.tb_partId.Name = "tb_partId";
+            this.tb_partId.Size = new System.Drawing.Size(100, 20);
+            this.tb_partId.TabIndex = 3;
             // 
             // tb_partName
             // 
@@ -103,6 +103,7 @@
             this.tb_partValue.Name = "tb_partValue";
             this.tb_partValue.Size = new System.Drawing.Size(100, 20);
             this.tb_partValue.TabIndex = 6;
+            this.tb_partValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimalKeyPress);
             // 
             // tb_partInventory
             // 
@@ -110,6 +111,7 @@
             this.tb_partInventory.Name = "tb_partInventory";
             this.tb_partInventory.Size = new System.Drawing.Size(100, 20);
             this.tb_partInventory.TabIndex = 5;
+            this.tb_partInventory.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
             // tb_partMin
             // 
@@ -117,6 +119,7 @@
             this.tb_partMin.Name = "tb_partMin";
             this.tb_partMin.Size = new System.Drawing.Size(53, 20);
             this.tb_partMin.TabIndex = 8;
+            this.tb_partMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
             // tb_partMax
             // 
@@ -124,13 +127,14 @@
             this.tb_partMax.Name = "tb_partMax";
             this.tb_partMax.Size = new System.Drawing.Size(53, 20);
             this.tb_partMax.TabIndex = 7;
+            this.tb_partMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
-            // textBox7
+            // tb_partVariable
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 199);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 9;
+            this.tb_partVariable.Location = new System.Drawing.Point(120, 199);
+            this.tb_partVariable.Name = "tb_partVariable";
+            this.tb_partVariable.Size = new System.Drawing.Size(100, 20);
+            this.tb_partVariable.TabIndex = 9;
             // 
             // lbl_Id
             // 
@@ -203,6 +207,7 @@
             this.btn_save.TabIndex = 17;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_cancel
             // 
@@ -228,13 +233,13 @@
             this.Controls.Add(this.lbl_Inventory);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Id);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tb_partVariable);
             this.Controls.Add(this.tb_partMin);
             this.Controls.Add(this.tb_partMax);
             this.Controls.Add(this.tb_partValue);
             this.Controls.Add(this.tb_partInventory);
             this.Controls.Add(this.tb_partName);
-            this.Controls.Add(this.tb_partID);
+            this.Controls.Add(this.tb_partId);
             this.Controls.Add(this.rb_outsourced);
             this.Controls.Add(this.rb_inHouse);
             this.Controls.Add(this.label1);
@@ -250,13 +255,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rb_inHouse;
         private System.Windows.Forms.RadioButton rb_outsourced;
-        private System.Windows.Forms.TextBox tb_partID;
+        private System.Windows.Forms.TextBox tb_partId;
         private System.Windows.Forms.TextBox tb_partName;
         private System.Windows.Forms.TextBox tb_partValue;
         private System.Windows.Forms.TextBox tb_partInventory;
         private System.Windows.Forms.TextBox tb_partMin;
         private System.Windows.Forms.TextBox tb_partMax;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tb_partVariable;
         private System.Windows.Forms.Label lbl_Id;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Inventory;
