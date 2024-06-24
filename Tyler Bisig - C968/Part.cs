@@ -9,11 +9,19 @@ namespace Tyler_Bisig___C968
 {
     public abstract class Part
     {
-        private int PartId;
-        private string Name;
-        private decimal Price;
-        private int InStock;
-        private int Min;
-        private int Max;
+        private int partId;
+        private string name;
+        private decimal price;
+        private int inStock;
+        private int min;
+        private int max;
+
+
+        public int PartId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int InStock { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
     }
 }
