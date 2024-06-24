@@ -39,7 +39,7 @@
             this.tb_searchPart = new System.Windows.Forms.TextBox();
             this.btn_searchProduct = new System.Windows.Forms.Button();
             this.tb_searchProduct = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dg_parts = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btn_addPart = new System.Windows.Forms.Button();
             this.btn_editPart = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.btn_editProduct = new System.Windows.Forms.Button();
             this.btn_addProduct = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_parts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,13 +150,13 @@
             this.tb_searchProduct.Size = new System.Drawing.Size(171, 20);
             this.tb_searchProduct.TabIndex = 8;
             // 
-            // dataGridView1
+            // dg_parts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(415, 175);
-            this.dataGridView1.TabIndex = 9;
+            this.dg_parts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_parts.Location = new System.Drawing.Point(28, 95);
+            this.dg_parts.Name = "dg_parts";
+            this.dg_parts.Size = new System.Drawing.Size(415, 175);
+            this.dg_parts.TabIndex = 9;
             // 
             // dataGridView2
             // 
@@ -194,6 +194,7 @@
             this.btn_deletePart.TabIndex = 13;
             this.btn_deletePart.Text = "Delete";
             this.btn_deletePart.UseVisualStyleBackColor = true;
+            this.btn_deletePart.Click += new System.EventHandler(this.btn_deletePart_Click);
             // 
             // btn_deleteProduct
             // 
@@ -247,7 +248,7 @@
             this.Controls.Add(this.btn_editPart);
             this.Controls.Add(this.btn_addPart);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dg_parts);
             this.Controls.Add(this.tb_searchProduct);
             this.Controls.Add(this.btn_searchProduct);
             this.Controls.Add(this.tb_searchPart);
@@ -261,7 +262,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainScreen";
             this.Text = "Main Screen";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_parts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,7 +282,7 @@
         private System.Windows.Forms.TextBox tb_searchPart;
         private System.Windows.Forms.Button btn_searchProduct;
         private System.Windows.Forms.TextBox tb_searchProduct;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dg_parts;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btn_addPart;
         private System.Windows.Forms.Button btn_editPart;
