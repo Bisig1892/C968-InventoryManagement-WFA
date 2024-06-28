@@ -29,42 +29,30 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tb_productId = new System.Windows.Forms.TextBox();
+            this.tb_productName = new System.Windows.Forms.TextBox();
+            this.tb_productInventory = new System.Windows.Forms.TextBox();
+            this.tb_productMax = new System.Windows.Forms.TextBox();
+            this.tb_productMin = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tb_productPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_candidateParts = new System.Windows.Forms.DataGridView();
             this.btn_AddPartToProduct = new System.Windows.Forms.Button();
             this.btn_SearchAddProduct = new System.Windows.Forms.Button();
             this.btn_DeletePartFromProduct = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_associatedParts = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_SaveProduct = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.tb_SearchPartsTable = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_candidateParts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_associatedParts)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,41 +65,44 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Product";
             // 
-            // textBox1
+            // tb_productId
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tb_productId.Enabled = false;
+            this.tb_productId.Location = new System.Drawing.Point(103, 153);
+            this.tb_productId.Name = "tb_productId";
+            this.tb_productId.Size = new System.Drawing.Size(100, 20);
+            this.tb_productId.TabIndex = 1;
             // 
-            // textBox2
+            // tb_productName
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.tb_productName.Location = new System.Drawing.Point(103, 179);
+            this.tb_productName.Name = "tb_productName";
+            this.tb_productName.Size = new System.Drawing.Size(100, 20);
+            this.tb_productName.TabIndex = 2;
             // 
-            // textBox3
+            // tb_productInventory
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.tb_productInventory.Location = new System.Drawing.Point(103, 205);
+            this.tb_productInventory.Name = "tb_productInventory";
+            this.tb_productInventory.Size = new System.Drawing.Size(100, 20);
+            this.tb_productInventory.TabIndex = 3;
+            this.tb_productInventory.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
-            // textBox4
+            // tb_productMax
             // 
-            this.textBox4.Location = new System.Drawing.Point(74, 257);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 20);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.tb_productMax.Location = new System.Drawing.Point(74, 257);
+            this.tb_productMax.Name = "tb_productMax";
+            this.tb_productMax.Size = new System.Drawing.Size(50, 20);
+            this.tb_productMax.TabIndex = 4;
+            this.tb_productMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
-            // textBox5
+            // tb_productMin
             // 
-            this.textBox5.Location = new System.Drawing.Point(169, 257);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(50, 20);
-            this.textBox5.TabIndex = 5;
+            this.tb_productMin.Location = new System.Drawing.Point(169, 257);
+            this.tb_productMin.Name = "tb_productMin";
+            this.tb_productMin.Size = new System.Drawing.Size(50, 20);
+            this.tb_productMin.TabIndex = 5;
+            this.tb_productMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
             // ID
             // 
@@ -158,12 +149,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Min";
             // 
-            // textBox6
+            // tb_productPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(103, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.tb_productPrice.Location = new System.Drawing.Point(103, 231);
+            this.tb_productPrice.Name = "tb_productPrice";
+            this.tb_productPrice.Size = new System.Drawing.Size(100, 20);
+            this.tb_productPrice.TabIndex = 11;
+            this.tb_productPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimalKeyPress);
             // 
             // label6
             // 
@@ -183,50 +175,13 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "All Candidate Parts";
             // 
-            // dataGridView1
+            // dg_candidateParts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(292, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(633, 150);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Part ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Inventory";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Min";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Max";
-            this.Column6.Name = "Column6";
+            this.dg_candidateParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_candidateParts.Location = new System.Drawing.Point(292, 130);
+            this.dg_candidateParts.Name = "dg_candidateParts";
+            this.dg_candidateParts.Size = new System.Drawing.Size(633, 150);
+            this.dg_candidateParts.TabIndex = 14;
             // 
             // btn_AddPartToProduct
             // 
@@ -236,6 +191,7 @@
             this.btn_AddPartToProduct.TabIndex = 15;
             this.btn_AddPartToProduct.Text = "Add";
             this.btn_AddPartToProduct.UseVisualStyleBackColor = true;
+            this.btn_AddPartToProduct.Click += new System.EventHandler(this.btn_AddPartToProduct_Click);
             // 
             // btn_SearchAddProduct
             // 
@@ -245,6 +201,7 @@
             this.btn_SearchAddProduct.TabIndex = 16;
             this.btn_SearchAddProduct.Text = "Search";
             this.btn_SearchAddProduct.UseVisualStyleBackColor = true;
+            this.btn_SearchAddProduct.Click += new System.EventHandler(this.btn_SearchAddProduct_Click);
             // 
             // btn_DeletePartFromProduct
             // 
@@ -254,51 +211,15 @@
             this.btn_DeletePartFromProduct.TabIndex = 19;
             this.btn_DeletePartFromProduct.Text = "Delete";
             this.btn_DeletePartFromProduct.UseVisualStyleBackColor = true;
+            this.btn_DeletePartFromProduct.Click += new System.EventHandler(this.btn_DeletePartFromProduct_Click);
             // 
-            // dataGridView2
+            // dg_associatedParts
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Location = new System.Drawing.Point(292, 345);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(633, 150);
-            this.dataGridView2.TabIndex = 18;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Part ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Inventory";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Min";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Max";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dg_associatedParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_associatedParts.Location = new System.Drawing.Point(292, 345);
+            this.dg_associatedParts.Name = "dg_associatedParts";
+            this.dg_associatedParts.Size = new System.Drawing.Size(633, 150);
+            this.dg_associatedParts.TabIndex = 18;
             // 
             // label8
             // 
@@ -317,6 +238,7 @@
             this.btn_SaveProduct.TabIndex = 20;
             this.btn_SaveProduct.Text = "Save";
             this.btn_SaveProduct.UseVisualStyleBackColor = true;
+            this.btn_SaveProduct.Click += new System.EventHandler(this.btn_SaveProduct_Click);
             // 
             // btn_Cancel
             // 
@@ -344,29 +266,29 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_SaveProduct);
             this.Controls.Add(this.btn_DeletePartFromProduct);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dg_associatedParts);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_SearchAddProduct);
             this.Controls.Add(this.btn_AddPartToProduct);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dg_candidateParts);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tb_productPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ID);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_productMin);
+            this.Controls.Add(this.tb_productMax);
+            this.Controls.Add(this.tb_productInventory);
+            this.Controls.Add(this.tb_productName);
+            this.Controls.Add(this.tb_productId);
             this.Controls.Add(this.label1);
             this.Name = "AddProduct";
             this.Text = "Product";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_candidateParts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_associatedParts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,36 +297,24 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tb_productId;
+        private System.Windows.Forms.TextBox tb_productName;
+        private System.Windows.Forms.TextBox tb_productInventory;
+        private System.Windows.Forms.TextBox tb_productMax;
+        private System.Windows.Forms.TextBox tb_productMin;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tb_productPrice;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView dg_candidateParts;
         private System.Windows.Forms.Button btn_AddPartToProduct;
         private System.Windows.Forms.Button btn_SearchAddProduct;
         private System.Windows.Forms.Button btn_DeletePartFromProduct;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dg_associatedParts;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_SaveProduct;
         private System.Windows.Forms.Button btn_Cancel;
