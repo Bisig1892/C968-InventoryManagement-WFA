@@ -15,7 +15,6 @@ namespace Tyler_Bisig___C968
         public EditPart()
         {
             InitializeComponent();
-            tb_partID.Enabled = false;
         }
 
         public EditPart(InHouse inHouse)
@@ -23,8 +22,6 @@ namespace Tyler_Bisig___C968
             InitializeComponent();
 
             rb_inHouse.Checked = true;
-            
-            tb_partID.Enabled = false;
             
             tb_partID.Text = Convert.ToString(inHouse.PartId);
             tb_partName.Text = inHouse.Name;

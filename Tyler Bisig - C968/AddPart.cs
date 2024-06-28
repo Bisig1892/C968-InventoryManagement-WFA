@@ -15,7 +15,6 @@ namespace Tyler_Bisig___C968
         public AddPart()
         {
             InitializeComponent();
-            tb_partId.Enabled = false;
 
         }
         // Checks to see if InHouse radio button is selected

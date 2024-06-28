@@ -85,6 +85,7 @@
             // 
             // tb_partId
             // 
+            this.tb_partId.Enabled = false;
             this.tb_partId.Location = new System.Drawing.Point(120, 69);
             this.tb_partId.Name = "tb_partId";
             this.tb_partId.Size = new System.Drawing.Size(100, 20);
