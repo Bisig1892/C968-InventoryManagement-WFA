@@ -40,7 +40,7 @@
             this.btn_searchProduct = new System.Windows.Forms.Button();
             this.tb_searchProduct = new System.Windows.Forms.TextBox();
             this.dg_parts = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dg_products = new System.Windows.Forms.DataGridView();
             this.btn_addPart = new System.Windows.Forms.Button();
             this.btn_editPart = new System.Windows.Forms.Button();
             this.btn_deletePart = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.btn_addProduct = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg_parts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -158,13 +158,13 @@
             this.dg_parts.Size = new System.Drawing.Size(415, 175);
             this.dg_parts.TabIndex = 9;
             // 
-            // dataGridView2
+            // dg_products
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(481, 95);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(415, 175);
-            this.dataGridView2.TabIndex = 10;
+            this.dg_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_products.Location = new System.Drawing.Point(481, 95);
+            this.dg_products.Name = "dg_products";
+            this.dg_products.Size = new System.Drawing.Size(415, 175);
+            this.dg_products.TabIndex = 10;
             // 
             // btn_addPart
             // 
@@ -247,7 +247,7 @@
             this.Controls.Add(this.btn_deletePart);
             this.Controls.Add(this.btn_editPart);
             this.Controls.Add(this.btn_addPart);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dg_products);
             this.Controls.Add(this.dg_parts);
             this.Controls.Add(this.tb_searchProduct);
             this.Controls.Add(this.btn_searchProduct);
@@ -263,7 +263,7 @@
             this.Name = "MainScreen";
             this.Text = "Main Screen";
             ((System.ComponentModel.ISupportInitialize)(this.dg_parts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Button btn_searchProduct;
         private System.Windows.Forms.TextBox tb_searchProduct;
         private System.Windows.Forms.DataGridView dg_parts;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dg_products;
         private System.Windows.Forms.Button btn_addPart;
         private System.Windows.Forms.Button btn_editPart;
         private System.Windows.Forms.Button btn_deletePart;

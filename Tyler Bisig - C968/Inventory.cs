@@ -34,13 +34,13 @@ namespace Tyler_Bisig___C968
         }
 
         // Adds Part
-        public static void addPart(int index, Part part)
+        public static void AddPart(int index, Part part)
         {
             Parts.Insert(index - 1, part);
         }
 
         // Adds Part
-        public static void addPart(Part part)
+        public static void AddPart(Part part)
         {
             Parts.Add(part);
         }
@@ -80,6 +80,35 @@ namespace Tyler_Bisig___C968
             Part NoPart = null;
             return NoPart;
 
+        }
+
+
+        // Creates a Product
+
+        public static void AddProduct(Product product)
+        {
+            Products.Add(product);
+        }
+
+        // Deletes product
+        public static bool DeleteProduct(int id)
+        {
+            bool remove = false;
+
+            foreach (Product product in Products)
+            {
+                if( id == product.ProductId )
+                {
+                    Products.Remove(product);
+                    return remove = true;
+                }
+                else 
+                {
+                    MessageBox.Show("Failed to remove product.");
+                    return false;
+                }
+            }
+            return remove;
         }
     }
 }

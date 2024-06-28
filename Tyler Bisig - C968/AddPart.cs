@@ -68,7 +68,7 @@ namespace Tyler_Bisig___C968
                 }
                 else
                 {
-                    Inventory.addPart(inHousePart);
+                    Inventory.AddPart(inHousePart);
                     this.Close();
                 }
             } 
@@ -96,7 +96,7 @@ namespace Tyler_Bisig___C968
                 }
                 else
                 {
-                    Inventory.addPart(outsourcedPart);
+                    Inventory.AddPart(outsourcedPart);
                     this.Close();
                 }
             }

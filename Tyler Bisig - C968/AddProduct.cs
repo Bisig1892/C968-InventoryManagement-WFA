@@ -113,6 +113,7 @@ namespace Tyler_Bisig___C968
                     {
                         throw;
                     }
+                    Inventory.AddProduct(product);
                 }
                 catch (Exception)
                 {

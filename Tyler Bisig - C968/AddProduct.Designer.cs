@@ -93,7 +93,7 @@
             this.tb_productMax.Location = new System.Drawing.Point(74, 257);
             this.tb_productMax.Name = "tb_productMax";
             this.tb_productMax.Size = new System.Drawing.Size(50, 20);
-            this.tb_productMax.TabIndex = 4;
+            this.tb_productMax.TabIndex = 5;
             this.tb_productMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
             // tb_productMin
@@ -101,7 +101,7 @@
             this.tb_productMin.Location = new System.Drawing.Point(169, 257);
             this.tb_productMin.Name = "tb_productMin";
             this.tb_productMin.Size = new System.Drawing.Size(50, 20);
-            this.tb_productMin.TabIndex = 5;
+            this.tb_productMin.TabIndex = 6;
             this.tb_productMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.digitKeyPress);
             // 
             // ID
@@ -154,7 +154,7 @@
             this.tb_productPrice.Location = new System.Drawing.Point(103, 231);
             this.tb_productPrice.Name = "tb_productPrice";
             this.tb_productPrice.Size = new System.Drawing.Size(100, 20);
-            this.tb_productPrice.TabIndex = 11;
+            this.tb_productPrice.TabIndex = 4;
             this.tb_productPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimalKeyPress);
             // 
             // label6
@@ -188,7 +188,7 @@
             this.btn_AddPartToProduct.Location = new System.Drawing.Point(850, 293);
             this.btn_AddPartToProduct.Name = "btn_AddPartToProduct";
             this.btn_AddPartToProduct.Size = new System.Drawing.Size(75, 23);
-            this.btn_AddPartToProduct.TabIndex = 15;
+            this.btn_AddPartToProduct.TabIndex = 9;
             this.btn_AddPartToProduct.Text = "Add";
             this.btn_AddPartToProduct.UseVisualStyleBackColor = true;
             this.btn_AddPartToProduct.Click += new System.EventHandler(this.btn_AddPartToProduct_Click);
@@ -198,7 +198,7 @@
             this.btn_SearchAddProduct.Location = new System.Drawing.Point(606, 91);
             this.btn_SearchAddProduct.Name = "btn_SearchAddProduct";
             this.btn_SearchAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btn_SearchAddProduct.TabIndex = 16;
+            this.btn_SearchAddProduct.TabIndex = 8;
             this.btn_SearchAddProduct.Text = "Search";
             this.btn_SearchAddProduct.UseVisualStyleBackColor = true;
             this.btn_SearchAddProduct.Click += new System.EventHandler(this.btn_SearchAddProduct_Click);
@@ -208,7 +208,7 @@
             this.btn_DeletePartFromProduct.Location = new System.Drawing.Point(850, 508);
             this.btn_DeletePartFromProduct.Name = "btn_DeletePartFromProduct";
             this.btn_DeletePartFromProduct.Size = new System.Drawing.Size(75, 23);
-            this.btn_DeletePartFromProduct.TabIndex = 19;
+            this.btn_DeletePartFromProduct.TabIndex = 10;
             this.btn_DeletePartFromProduct.Text = "Delete";
             this.btn_DeletePartFromProduct.UseVisualStyleBackColor = true;
             this.btn_DeletePartFromProduct.Click += new System.EventHandler(this.btn_DeletePartFromProduct_Click);
@@ -235,7 +235,7 @@
             this.btn_SaveProduct.Location = new System.Drawing.Point(752, 580);
             this.btn_SaveProduct.Name = "btn_SaveProduct";
             this.btn_SaveProduct.Size = new System.Drawing.Size(75, 23);
-            this.btn_SaveProduct.TabIndex = 20;
+            this.btn_SaveProduct.TabIndex = 11;
             this.btn_SaveProduct.Text = "Save";
             this.btn_SaveProduct.UseVisualStyleBackColor = true;
             this.btn_SaveProduct.Click += new System.EventHandler(this.btn_SaveProduct_Click);
@@ -245,7 +245,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(850, 580);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancel.TabIndex = 21;
+            this.btn_Cancel.TabIndex = 12;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -255,7 +255,7 @@
             this.tb_SearchPartsTable.Location = new System.Drawing.Point(687, 94);
             this.tb_SearchPartsTable.Name = "tb_SearchPartsTable";
             this.tb_SearchPartsTable.Size = new System.Drawing.Size(238, 20);
-            this.tb_SearchPartsTable.TabIndex = 22;
+            this.tb_SearchPartsTable.TabIndex = 7;
             // 
             // AddProduct
             // 

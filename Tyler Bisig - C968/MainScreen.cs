@@ -31,6 +31,12 @@ namespace Tyler_Bisig___C968
             var Parts = new BindingSource();
             Parts.DataSource = Inventory.Parts;
             dg_parts.DataSource = Parts;
+
+            // populates products data grid
+            var Products = new BindingSource();
+            Products.DataSource = Inventory.Products;
+            dg_products.DataSource = Products;
+            dg_products.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // opens Add Part Window
