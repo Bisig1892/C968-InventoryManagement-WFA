@@ -31,6 +31,7 @@ namespace Tyler_Bisig___C968
             var Parts = new BindingSource();
             Parts.DataSource = Inventory.Parts;
             dg_parts.DataSource = Parts;
+            dg_products.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // populates products data grid
             var Products = new BindingSource();
@@ -88,6 +89,11 @@ namespace Tyler_Bisig___C968
                 }
             }
         }
+        // searches for part
+        private void btn_searchPart_Click(object sender, EventArgs e)
+        {
+
+        }
         // opens Add Product Window
         private void btn_addProduct_Click(object sender, EventArgs e)
         {
@@ -97,8 +103,37 @@ namespace Tyler_Bisig___C968
         // opens Modify Product Window 
         private void btn_editProduct_Click(object sender, EventArgs e)
         {
-            EditProduct frm = new EditProduct();
-            frm.Show();
+            if (dg_products.CurrentRow == null || !dg_products.CurrentRow.Selected)
+            {
+                MessageBox.Show("Please select a product to edit.");
+                return;
+            }
+            if (dg_products.CurrentRow.DataBoundItem is Product)
+            {
+                Product SelectedProduct = dg_products.CurrentRow.DataBoundItem as Product;
+                new EditProduct(SelectedProduct).ShowDialog();
+            }
+        }
+        private void btn_deleteProduct_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product?", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                Product p = (Product)dg_products.CurrentRow.DataBoundItem;
+                if (p.AssociatedParts.Count > 0)
+                {
+                    MessageBox.Show("You must unassign assigned parts from product before deleting.");
+                    return;
+                }
+                foreach (DataGridViewRow r in dg_products.SelectedRows) 
+                {
+                    dg_products.Rows.RemoveAt(r.Index);
+                }
+            }
+            else
+            {
+                return;
+            }
         }
         // Closes Application
         private void btn_exit_Click(object sender, EventArgs e)

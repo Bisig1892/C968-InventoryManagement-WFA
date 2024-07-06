@@ -106,6 +106,7 @@
             this.btn_searchPart.TabIndex = 1;
             this.btn_searchPart.Text = "Search";
             this.btn_searchPart.UseVisualStyleBackColor = true;
+            this.btn_searchPart.Click += new System.EventHandler(this.btn_searchPart_Click);
             // 
             // label4
             // 
@@ -204,6 +205,7 @@
             this.btn_deleteProduct.TabIndex = 16;
             this.btn_deleteProduct.Text = "Delete";
             this.btn_deleteProduct.UseVisualStyleBackColor = true;
+            this.btn_deleteProduct.Click += new System.EventHandler(this.btn_deleteProduct_Click);
             // 
             // btn_editProduct
             // 
