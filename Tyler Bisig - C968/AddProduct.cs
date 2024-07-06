@@ -12,7 +12,6 @@ namespace Tyler_Bisig___C968
 {
     public partial class AddProduct : Form
     {
-        Inventory inventory = new Inventory();
         Product product = new Product();
 
         public BindingList<Part> tempPart = new BindingList<Part>();
@@ -76,7 +75,7 @@ namespace Tyler_Bisig___C968
                 else return;
             }
         }
-
+        // Saves Product
         private void btn_SaveProduct_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_productName.Text) || string.IsNullOrWhiteSpace(tb_productInventory.Text) ||
@@ -131,28 +130,21 @@ namespace Tyler_Bisig___C968
             this.Close();
         }
 
-        // searches parts datagridview
+        // searches candidate parts datagridview
         private void btn_SearchAddProduct_Click(object sender, EventArgs e)
         {
+            string searchValue = tb_SearchPartsTable.Text.ToLower();
+
+            dg_candidateParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             try
             {
-                int SearchID = int.Parse(tb_SearchPartsTable.Text);
-                Part partFound = Inventory.GetPart(SearchID);
-
                 foreach (DataGridViewRow r in dg_candidateParts.Rows)
                 {
-                    Part p = (Part)r.DataBoundItem;
-                    if (p.PartId == partFound.PartId)
+                    if (r.Cells[1].Value.ToString().ToLower().Contains(searchValue))
                     {
                         r.Selected = true;
-                        dg_candidateParts.CurrentCell = r.Cells[0];
-
                         break;
-
-                    }
-                    else
-                    {
-                        r.Selected = false;
                     }
                 }
             }
