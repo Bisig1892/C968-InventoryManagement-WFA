@@ -20,12 +20,10 @@ namespace Tyler_Bisig___C968
         public static void populateLists()
         {
             //populate Parts
-
             Part testPart1 = new InHouse(1, "Mouse", (decimal)12.99, 22, 1, 200, 1234);
             Part testPart2 = new InHouse(2, "Keyboard", (decimal)18.76, 18, 17, 25, 4321);
-            Part testPart3 = new InHouse(3, "Graphics Card", (decimal)879.05, 34, 17, 44, 489214);
+            Part testPart3 = new Outsourced(3, "Graphics Card", (decimal)879.05, 34, 17, 44, "Some Company");
             Part testPart4 = new Outsourced(4, "Motherboard", (decimal)128.50, 6, 6, 75, "Test Company");
-
 
             Parts.Add(testPart1);
             Parts.Add(testPart2);
@@ -33,11 +31,6 @@ namespace Tyler_Bisig___C968
             Parts.Add(testPart4);
         }
 
-        // Adds Part
-        public static void AddPart(int index, Part part)
-        {
-            Parts.Insert(index - 1, part);
-        }
 
         // Adds Part
         public static void AddPart(Part part)
@@ -84,10 +77,27 @@ namespace Tyler_Bisig___C968
 
 
         // Creates a Product
-
         public static void AddProduct(Product product)
         {
             Products.Add(product);
+        }
+
+        // Updates a product
+        public static void UpdateProduct(int id, Product updatedProduct)
+        {
+            foreach(Product currproduct in Products)
+            {
+                if(currproduct.ProductId == id)
+                {
+                    currproduct.Name = updatedProduct.Name;
+                    currproduct.Price = updatedProduct.Price;
+                    currproduct.InStock = updatedProduct.InStock;
+                    currproduct.Min = updatedProduct.Min;
+                    currproduct.Max = updatedProduct.Max;
+                    currproduct.AssociatedParts = updatedProduct.AssociatedParts;
+                    return;
+                }
+            }
         }
 
         // Deletes product
