@@ -92,7 +92,25 @@ namespace Tyler_Bisig___C968
         // searches for part
         private void btn_searchPart_Click(object sender, EventArgs e)
         {
+            string searchValue = tb_searchPart.Text.ToLower();
 
+            dg_parts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            try
+            {
+                foreach (DataGridViewRow r in dg_parts.Rows)
+                {
+                    if (r.Cells[1].Value.ToString().ToLower().Contains(searchValue))
+                    {
+                        r.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Part not found.");
+            }
         }
         // opens Add Product Window
         private void btn_addProduct_Click(object sender, EventArgs e)
@@ -135,10 +153,33 @@ namespace Tyler_Bisig___C968
                 return;
             }
         }
+        private void btn_searchProduct_Click(object sender, EventArgs e)
+        {
+            string searchValue = tb_searchProduct.Text.ToLower();
+
+            dg_products.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            try
+            {
+                foreach (DataGridViewRow r in dg_products.Rows)
+                {
+                    if (r.Cells[1].Value.ToString().ToLower().Contains(searchValue))
+                    {
+                        r.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Part not found.");
+            }
+        }
         // Closes Application
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

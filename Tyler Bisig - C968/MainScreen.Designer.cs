@@ -143,6 +143,7 @@
             this.btn_searchProduct.TabIndex = 7;
             this.btn_searchProduct.Text = "Search";
             this.btn_searchProduct.UseVisualStyleBackColor = true;
+            this.btn_searchProduct.Click += new System.EventHandler(this.btn_searchProduct_Click);
             // 
             // tb_searchProduct
             // 
